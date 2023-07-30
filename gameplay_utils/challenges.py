@@ -122,6 +122,20 @@ def challenge_shiva(player):
 
 
 def challenge_asura(player):
+    village_ascii_art = """
+     /\\
+    /  \\
+   /    \\
+  /      \\
+ /________\\
+ |        |
+ | []  [] |  
+ |        |
+(|________|)
+ ^        ^
+"""
+
+    print(village_ascii_art)
     print(f"{Color.PURPLE}The Asura warriors are attacking your village. You decide to defend it. Do you fight them head-on or devise a strategy to outsmart them?{Color.END}")
     answer = input("Your choice (fight/strategy): ")
 
