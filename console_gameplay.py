@@ -58,18 +58,8 @@ def game_loop():
         if quest_completed:
             locations.remove(chosen_location)  # Remove completed location
 
-        # Check if player is strong enough to defeat boss
-        if player.wisdom + player.courage + player.selflessness + player.strength > boss.strength:
-            print(f"{Color.YELLOW}The Divya Jyoti within you burns brighter. You feel a surge of divine power coursing through your veins. You are ready to face Mahakala.{Color.END}")
-            fight = input("Will you confront Mahakala now? (yes/no) ")
-            if fight.lower() == "yes":
-                print(f"{Color.RED}\nYour journey culminates in the Asura realm, where Mahakala awaits. The final battle is fierce and grueling, but in the end, you stand victorious. The cosmos is saved, and balance is restored!{Color.END}")
-                break
-
-        if not locations:
-            print(f"{Color.BLUE}\nYou have traveled far and wide, faced many trials, and grown immensely. Now, you are ready to face Mahakala.{Color.END}")
-            print(f"{Color.RED}\nYour journey culminates in the Asura realm, where Mahakala awaits. The final battle is fierce and grueling, but in the end, you stand victorious. The cosmos is saved, and balance is restored!{Color.END}")
-            break
+        # Finally Fight boss
+        fight_boss(player, boss)
 
 
 

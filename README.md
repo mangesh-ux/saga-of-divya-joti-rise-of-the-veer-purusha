@@ -8,6 +8,9 @@ run `python3 console_gameplay.py` to start the game.
 This is just the first iteration and a lot of improvements are pending.
 
 #### sample gameplay:
-![image](https://github.com/mangesh-ux/saga-of-divya-joti-rise-of-the-veer-purusha/assets/55969525/7e49df55-5cb8-411e-869f-aef3c293844e)
+![image](gameplay-1.png)
+![image](gameplay-2.png)
+![image](gameplay-3.png)
+
 
 
