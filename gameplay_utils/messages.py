@@ -11,7 +11,7 @@ class Message:
         print(f"{Color.GREEN}Embark on a spiritual journey through various realms of Hindu mythology, from the sacred peaks of Kailash to the depths of Patala. Along your journey, you will encounter various challenges, puzzles, mythical creatures, and deities. You will need to make decisions based on morality, courage, wisdom, and selflessness. Each decision you make will determine the strength of your Divya Jyoti.{Color.END}")
         print()
     def describe_bramha_quest(self):
-        print(f"You have travelled to sacred ashrams hidden in the dense forests of {Color.GREEN}Dandakaranya{Color.END} to learn the Vedas' wisdom. It is the test of your knowledge and wisdom where ancient rishis and scholars pose puzzles and riddles in your path to achieve enlightement.")
+        print(f"You have travelled to sacred ashrams hidden in the dense forests of {Color.GREEN}Dandakaranya{Color.END} to learn the Vedas' wisdom. It is the test of your knowledge and wisdom where ancient rishis and scholars pose puzzles and riddles in your path to achieve enlightement. {Color.RED}Keep in Mind that the number of attempts to solve a riddle are limited and you'll be given a maximum of three hints if you fail{Color.END}")
         print()
         print(f"{Color.DARKCYAN}You sit with Bramha and the test begins...{Color.END}")
         print()

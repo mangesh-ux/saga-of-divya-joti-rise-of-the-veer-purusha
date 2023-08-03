@@ -32,7 +32,7 @@ def challenge_brahma(player):
                 print(f"\nYou have answered correctly!")
                 break  # Breaks the inner loop and moves to the next riddle
             else:
-                if i < 2:
+                if i < 3:
                     print(f"\nYou have answered incorrectly. Brahma gives you a hint: {riddle['hints'][i]}")
                 else:
                     print("\nBrahma seems disappointed as you failed to solve his riddle. He vanishes, and you are left alone in the forest.")
