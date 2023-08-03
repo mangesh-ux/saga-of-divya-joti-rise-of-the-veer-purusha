@@ -5,7 +5,7 @@
 __pycache__
 *.so
 *.ipynb_checkpoints
-
+village.png
 # Environments
 .env
 .venv

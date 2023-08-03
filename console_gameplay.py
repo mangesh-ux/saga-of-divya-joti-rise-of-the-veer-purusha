@@ -1,17 +1,6 @@
 from gameplay_utils.components import *
 from gameplay_utils.challenges import *
-
-def challenge_player(player, location):
-    print(f"{Color.PURPLE}{location.quest.challenge}{Color.END}")
-    player_input = input("Will you face this challenge? (yes/no) ")
-    if player_input.lower() == "yes":
-        location.quest.reward(10)
-        print(f"\nWith determination and bravery, you face the challenge head-on and emerge victorious. Your powers grow stronger. Your current powers are: Wisdom {player.wisdom}, Courage {player.courage}, Selflessness {player.selflessness}, Strength {player.strength}.\n")
-        return True
-    else:
-        print("\nYou decide to step back from the challenge, choosing to seek out different trials.")
-        return False
-
+from gameplay_utils.messages import Message
 
 def game_loop():
     # Instantiate player, quests, locations, and boss
@@ -28,10 +17,12 @@ def game_loop():
     locations = [location1, location2, location3, location4]
 
     boss = Boss("Mahakala", 100)
+    messages = Message()
+    messages.initial_message()
 
     # Main game loop
     while len(locations):
-        print(f"{Color.BOLD}Welcome {player.name}! You are the Veer Purusha, the prophesied hero who will restore balance to the cosmos.{Color.END}")
+        print(f"{Color.DARKCYAN}Welcome {player.name}! You are the Veer Purusha, the prophesied hero who will restore balance to the cosmos.{Color.END}")
         print(f"Your current powers are: Wisdom {player.wisdom}, Courage {player.courage}, Selflessness {player.selflessness}, Strength {player.strength}.\n")
 
         # Choose a location
@@ -47,6 +38,7 @@ def game_loop():
 
         # Challenge player and check for quest completion
         if chosen_location.name == 'Dandakaranya':
+            messages.describe_bramha_quest()
             quest_completed = challenge_brahma(player)
         elif chosen_location.name == 'Vaikuntha':
             quest_completed = challenge_vishnu(player)
