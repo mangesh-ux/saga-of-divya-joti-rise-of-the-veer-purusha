@@ -30,7 +30,7 @@ def game_loop():
     boss = Boss("Mahakala", 100)
 
     # Main game loop
-    while True:
+    while len(locations):
         print(f"{Color.BOLD}Welcome {player.name}! You are the Veer Purusha, the prophesied hero who will restore balance to the cosmos.{Color.END}")
         print(f"Your current powers are: Wisdom {player.wisdom}, Courage {player.courage}, Selflessness {player.selflessness}, Strength {player.strength}.\n")
 
@@ -58,8 +58,8 @@ def game_loop():
         if quest_completed:
             locations.remove(chosen_location)  # Remove completed location
 
-        # Finally Fight boss
-        fight_boss(player, boss)
+    # Finally Fight boss
+    fight_boss(player, boss)
 
 
 
